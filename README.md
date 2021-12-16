@@ -4,6 +4,8 @@ Log4jake works by spidering a web application for GET/POST requests. It will the
   
 If you want to test behind authentication, use the commented '#req.add_header('Authorization', "token_goes_here")' line to add the proper token. If you are experiencing SSL errors, use the commented '#context = ssl._create_unverified_context()' line in addition to 'resp = urllib.request.urlopen(req, context=context)'
   
+If your application is vulnerable to Log4j, your NetCat listener will receive a connection.
+  
   Syntax:
 ```
   └─$ python3 log4jake.py https://10.10.3.50
